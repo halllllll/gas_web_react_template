@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "description": "gas_web_react_backend",
+  "main": "index.js",
+  "scripts": {
+    "backend:parcel-desc": "echo `なぜか--dist-dirが効かず、index.jsが作成されるので、無理やりmvする。かつ、リネームする（index.jsはフロント側で使っている）`",
+    "backend:parcel": "./node_modules/.bin/parcel build src/main.ts  --dist-dir dist --no-source-maps --no-cache; node -e \"require('fs').copyFileSync('index.js', './dist/main.js')\"; rimraf index.js",
+    "gen-dts": "./node_modules/.bin/google-script-dts-generator --sourcesDir . --outputDir ../frontend/src/@types"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.55",
+    "cpx": "^1.5.0",
+    "google-script-dts-generator": "^1.2.0",
+    "parcel": "^2.7.0",
+    "parcel-optimizer-gas": "^1.0.3",
+    "rimraf": "^3.0.2"
+  }
+}

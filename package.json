@@ -1,0 +1,33 @@
+{
+  "name": "gas_web_react_tutorial_template",
+  "version": "0.1.0",
+  "description": "gas_web_react_tutorial",
+  "scripts": {
+    "scripts-desc": "devcontainerでnpmパッケージをglobal installしてる想定なので,いつものように`./node_modules/.bin/~`の絶対パスでの使用を指定してない（devDependenciesの詳細は./devcontainer/devcontainer.json）。ただしeslintとprettierとparcelは追加でglobalにインストールしている",
+    "frontend:prettier": "prettier  --config .prettierrc  frontend/src/**/*.tsx --write",
+    "frontend:eslint": "eslint frontend/src/**/*.tsx --fix",
+    "backend:prettier": "prettier  --config .prettierrc  backend/src/**/*.ts --write",
+    "backend:eslint": "eslint backend/src/**/*.ts --fix",
+    "postbuild": "cpx ./backend/dist/**/* ./dist & cpx ./appsscript.json ./dist & cpx ./frontend/dist/index.html ./dist",
+    "push": "clasp push"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.55",
+    "@types/node": "^18.7.20",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "cpx": "^1.5.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.31.8",
+    "parcel": "^2.7.0",
+    "parcel-optimizer-gas": "^1.0.3",
+    "process": "^0.11.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-loader": "^9.4.1"
+  }
+}
