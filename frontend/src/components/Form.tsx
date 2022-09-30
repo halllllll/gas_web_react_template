@@ -53,7 +53,7 @@ const Form = (props: formTitleProps) => {
       .withFailureHandler((err) => {
         alert(err)
       })
-      .echo("yokoyama") // こんなもんねぇけどな
+      .echo2("yokoyama", "sakakibara")
     console.log('はい')
 
     // return new Promise((resolve, reject) => {

@@ -12,6 +12,19 @@ const getAllDataOfSheet = () => {
   }
 }
 
+globalThis.echo2 = (s1: string, s2: string) => {
+  console.log(`here is echo2!`);
+  const ret = {
+    message: `echo2!!`,
+    name: s1,
+    mail: s2,
+    success: true,
+    arr: ['さかな', 'チンアナゴ']
+  }
+  return JSON.parse(JSON.stringify(ret))
+
+}
+
 globalThis.setData = (d: FormData) => {
   console.log(`get!!! ${d}`)
   console.log(`結局決め打ちでしか取れないのか...? ${d.email}:${d.name}`)

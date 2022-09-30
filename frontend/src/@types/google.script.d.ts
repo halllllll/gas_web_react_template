@@ -10,6 +10,7 @@ declare namespace google {
             }): void;
             getData(): void;
             echo(msg: string): void;
+            echo2(msg1: string, msg2: string):void;
             getData2(): void;
             doGet(): void;
             /**
