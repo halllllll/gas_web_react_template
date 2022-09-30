@@ -24,7 +24,7 @@ const Form = (props: formTitleProps) => {
     criteriaMode: 'all',
     defaultValues: {
       name: 'どうして...',
-      email: ''
+      email: 'kusottare@fuck.shit'
     }
   })
 
@@ -44,6 +44,7 @@ const Form = (props: formTitleProps) => {
     console.log(`here is handle On Submit!!!!!!!`)
     console.log(`data?(promise外) ${data}`)
     console.log('あとでpromise化する')
+    // いや呼んでないけどなんでis not a functionって言われなきゃいけねぇんだよ
     google.script.run
       .withSuccessHandler((d) => {
         console.log(`yes getData`)
@@ -52,7 +53,7 @@ const Form = (props: formTitleProps) => {
       .withFailureHandler((err) => {
         alert(err)
       })
-      .getData()
+      .echo("yokoyama") // こんなもんねぇけどな
     console.log('はい')
 
     // return new Promise((resolve, reject) => {

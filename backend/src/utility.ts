@@ -1,3 +1,5 @@
-export const customFunc = () => {
+const customFunc = () => {
   console.log(`here is other file!`)
 }
+
+export default customFunc

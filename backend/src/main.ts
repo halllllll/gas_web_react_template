@@ -1,5 +1,5 @@
-import { customFunc } from './utility'
-import globalThis, { FormData } from './global'
+import customFunc from './utility'
+import global, { FormData } from './global'
 
 const ss = SpreadsheetApp.getActiveSpreadsheet()
 const sheet = ss.getActiveSheet()
@@ -33,6 +33,10 @@ globalThis.getData = () => {
   return ContentService.createTextOutput(JSON.stringify(ret)).setMimeType(
     ContentService.MimeType.JSON
   )
+}
+
+globalThis.echo = (msg: string) =>{
+  return `echoooo ${msg}`
 }
 
 globalThis.getData2 = () => {

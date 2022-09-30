@@ -9,7 +9,7 @@ export type FormData = {
 declare global {
   function getData(): GoogleAppsScript.Content.TextOutput
   function getData2(): JSON
-  function echo(data: string): string
+  function echo(msg: string): string
   function doGet(): GoogleAppsScript.HTML.HtmlOutput
   function setData(data: FormData): JSON
 

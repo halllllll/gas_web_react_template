@@ -41,9 +41,8 @@ const Form2 = (props: formTitleProps) => {
   // });
 
   const handleOnSubmit = (data: FormData) => {
-    console.log(`here is handle On Submit!!!!!!!`)
     console.log(`data?(promise外) ${data}`)
-    console.log('あとでpromise化する')
+    console.log(`これはform2です`)
     google.script.run
       .withSuccessHandler((d) => {
         console.log(d)

@@ -4,13 +4,14 @@ declare namespace google {
      */
     namespace script {
         interface IRun {
-            doGet(): void;
             setData(d: {
                 name: string;
                 email: string;
             }): void;
             getData(): void;
+            echo(msg: string): void;
             getData2(): void;
+            doGet(): void;
             /**
              * Sets a callback function to run if the server-side function throws an exception. Without a failure handler, failures are logged to the JavaScript console. To override this, call withFailureHandler(null) or supply a failure handler that does nothing.
              * @param callback a client-side callback function to run if the server-side function throws an exception; the Error object is passed to the function as the first argument, and the user object (if any) is passed as a second argument

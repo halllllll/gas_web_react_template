@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from 'react-dom/client';
 import {Message} from "./components/Index";
+import {Form, FormTest, Form2} from "./components/Index";
 
 const rootElemnt = document.getElementById("app") as HTMLElement;
 const root = ReactDOM.createRoot(rootElemnt);
@@ -17,11 +18,11 @@ root.render(
     <Message name = "WHY"/>
     {/* <TitleArea />
     <InputArea handleChangeName={handleChangeName}/>
-    <ContentArea lastName={lastName} firstName={firstName}/>
+    <ContentArea lastName={lastName} firstName={firstName}/> */}
     <Form formTitle="REACT HOOK FORM TEST"/>
     <hr/>
     <FormTest />
     <hr/>
-    <Form2 formTitle="form2♡"/> */}
+    <Form2 formTitle="form2♡"/>
   </React.StrictMode>
 );
