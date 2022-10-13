@@ -55,19 +55,6 @@ const Form = (props: formTitleProps) => {
       })
       .echo2("yokoyama", "sakakibara")
     console.log('はい')
-
-    // return new Promise((resolve, reject) => {
-    //   google.script.run
-    //     .withSuccessHandler((v) => {
-    //       console.log(`v! ${v}`)
-    //       resolve(v)
-    //     })
-    //     .withFailureHandler((e) => {
-    //       console.error(`error::::: ${e}`)
-    //       reject(e)
-    //     })
-    //     .setData(data)
-    // })
   }
 
   const handleOnError = (errors) => {
@@ -80,16 +67,9 @@ const Form = (props: formTitleProps) => {
       <h2>このFormは{formTitle}です</h2>
 
       <form
-        // onSubmit={(e) => {
-        //   e.preventDefault()
-        //   console.log(`おっ♡ ${new Date()} preventDefaultしたよ`)
-        //   handleSubmit(handleOnSubmit, handleOnError)
-
-        //   console.log(`あれ...?`)
-        // }}
         onSubmit={handleSubmit(handleOnSubmit, handleOnError)}
-        // encType="multipart/form-data"
-        // id="form"
+        encType="multipart/form-data"
+        id="form"
       >
         <div>
           <label htmlFor="name">名前: </label>

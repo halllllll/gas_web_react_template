@@ -28,18 +28,6 @@ const Form2 = (props: formTitleProps) => {
     }
   })
 
-  // const runGoogleScript = new Promise((resolve, reject) => {
-  //   google.script.run
-  //     .withSuccessHandler(data=>{
-  //       console.log(`yes success`);
-  //       resolve(data);
-  //     })
-  //     .withFailureHandler(err =>{
-  //       console.error(`omg error`)
-  //       reject(err)
-  //     }).echo("なぜ");
-  // });
-
   const handleOnSubmit = (data: FormData) => {
     console.log(`data?(promise外) ${data}`)
     console.log(`これはform2です`)
@@ -52,19 +40,6 @@ const Form2 = (props: formTitleProps) => {
       })
       .getData2()
     console.log('はい')
-
-    // return new Promise((resolve, reject) => {
-    //   google.script.run
-    //     .withSuccessHandler((v) => {
-    //       console.log(`v! ${v}`)
-    //       resolve(v)
-    //     })
-    //     .withFailureHandler((e) => {
-    //       console.error(`error::::: ${e}`)
-    //       reject(e)
-    //     })
-    //     .setData(data)
-    // })
   }
 
   const handleOnError = (errors) => {
@@ -77,16 +52,9 @@ const Form2 = (props: formTitleProps) => {
       <h2>このFormは{formTitle}です</h2>
 
       <form
-        // onSubmit={(e) => {
-        //   e.preventDefault()
-        //   console.log(`おっ♡ ${new Date()} preventDefaultしたよ`)
-        //   handleSubmit(handleOnSubmit, handleOnError)
-
-        //   console.log(`あれ...?`)
-        // }}
         onSubmit={handleSubmit(handleOnSubmit, handleOnError)}
-        // encType="multipart/form-data"
-        // id="form"
+        encType="multipart/form-data"
+        id="form2"
       >
         <div>
           <label htmlFor="name">名前: </label>

@@ -9,4 +9,5 @@ FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
 # [Optional] Uncomment if you want to install an additional version of node using nvm
 # ARG EXTRA_NODE_VERSION=10
 RUN su node -c "npm i -g clasp"
-RUN su node -c "npm i -g styled-components ts-node prettier eslint typescript-eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-plugin-react@latest eslint-plugin-react-hooks eslint-plugin-import"
+RUN su node -c "npm i -g styled-components ts-node"
+RUN su node -c "npm i -D prettier eslint typescript-eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-plugin-react@latest eslint-plugin-react-hooks eslint-plugin-import"
