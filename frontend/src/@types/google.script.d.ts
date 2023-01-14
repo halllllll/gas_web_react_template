@@ -10,8 +10,9 @@ declare namespace google {
       getData(): void;
       // eslint-disable-next-line @typescript-eslint/method-signature-style
       echo(msg: string): void;
+
       // eslint-disable-next-line @typescript-eslint/method-signature-style
-      echo2(msg1: string, msg2: string): void;
+      echo2(arg: IEcho2): void;
       // eslint-disable-next-line @typescript-eslint/method-signature-style
       getData2(): void;
       // eslint-disable-next-line @typescript-eslint/method-signature-style

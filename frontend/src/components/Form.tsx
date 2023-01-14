@@ -23,8 +23,8 @@ const Form = (props: formTitleProps): JSX.Element => {
   } = useForm<FormData>({
     criteriaMode: 'all',
     defaultValues: {
-      name: 'どうして...',
-      email: 'kusottare@fuck.shit',
+      name: 'これは名前のplaceholder',
+      email: 'thiis@default.mail',
     },
   });
 
@@ -40,10 +40,13 @@ const Form = (props: formTitleProps): JSX.Element => {
   //     }).echo("なぜ");
   // });
 
-  const handleOnSubmit = (data: FormData) => {
+  const handleOnSubmit = (data: IEcho2) => {
     console.log(`here is handle On Submit!!!!!!!`);
     // eslint-disable-next-line @typescript-eslint/no-base-to-string, @typescript-eslint/restrict-template-expressions
-    console.log(`data?(promise外) ${data}`);
+    console.log(
+      // eslint-disable-next-line @typescript-eslint/no-base-to-string, @typescript-eslint/restrict-template-expressions
+      `data?(promise外) ${data}, email: ${data.email}, name: ${data.name}`
+    );
     console.log('あとでpromise化する');
     // いや呼んでないけどなんでis not a functionって言われなきゃいけねぇんだよ
     google.script.run
@@ -54,7 +57,7 @@ const Form = (props: formTitleProps): JSX.Element => {
       .withFailureHandler((err) => {
         alert(err);
       })
-      .echo2('yokoyama', 'sakakibara');
+      .echo2(data); // IEcho2いけるか？？？
     console.log('はい');
   };
 
