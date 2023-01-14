@@ -1,5 +1,5 @@
-const customFunc = () => {
-  console.log(`here is other file!`)
-}
+const customFunc = (): void => {
+  console.log(`here is other file!`);
+};
 
-export default customFunc
+export default customFunc;

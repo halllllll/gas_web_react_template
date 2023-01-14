@@ -1,13 +1,14 @@
-import React from 'react'
-import { Paper, Stack, Typography } from '@mui/material'
+import React from 'react';
+import { Paper, Stack, Typography } from '@mui/material';
 
 type ContentAreaProps = {
-  lastName: string
-  firstName: string
-}
+  lastName: string;
+  firstName: string;
+};
 
-const ContentArea = (props: ContentAreaProps) => {
-  const { lastName, firstName } = props
+const ContentArea = (props: ContentAreaProps): JSX.Element => {
+  const { lastName, firstName } = props;
+
   return (
     <Paper>
       <Stack spacing={2} margin={2}>
@@ -19,7 +20,7 @@ const ContentArea = (props: ContentAreaProps) => {
         <Typography variant="h4">なにこれどうなるの</Typography>
       </Stack>
     </Paper>
-  )
-}
+  );
+};
 
-export default ContentArea
+export default ContentArea;

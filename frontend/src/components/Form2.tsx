@@ -1,51 +1,52 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
+import React from 'react';
+import { useForm } from 'react-hook-form';
 
 type formTitleProps = {
-  formTitle: string
-}
+  formTitle: string;
+};
 
 // useFormの型定義(tsなので)
 // 組み込みのFormDataはuseFormでオプションつけれなかったりとちょっと手触りが悪い気がする
 type FormData = {
-  country: string
-  comment: string
-}
+  country: string;
+  comment: string;
+};
 
-const Form2 = (props: formTitleProps) => {
-  const { formTitle } = props
+const Form2 = (props: formTitleProps): JSX.Element => {
+  const { formTitle } = props;
 
   // useFormの初期化
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting }
+    formState: { errors, isSubmitting },
   } = useForm<FormData>({
     criteriaMode: 'all',
     defaultValues: {
       country: 'COUNTRY',
-      comment: 'COMMENT'
-    }
-  })
+      comment: 'COMMENT',
+    },
+  });
 
   const handleOnSubmit = (data: FormData) => {
-    console.log(`data?(promise外) ${data}`)
-    console.log(`これはform2です`)
+    // eslint-disable-next-line @typescript-eslint/no-base-to-string, @typescript-eslint/restrict-template-expressions
+    console.log(`data?(promise外) ${data}`);
+    console.log(`これはform2です`);
     google.script.run
       .withSuccessHandler((d) => {
-        console.log(d)
+        console.log(d);
       })
       .withFailureHandler((err) => {
-        alert(err)
+        alert(err);
       })
-      .getData2()
-    console.log('はい')
-  }
+      .getData2();
+    console.log('はい');
+  };
 
-  const handleOnError = (errors) => {
-    console.error(`here is on handle On Error`)
-    console.error(errors)
-  }
+  const handleOnError = (errors: any) => {
+    console.error(`here is on handle On Error`);
+    console.error(errors);
+  };
 
   return (
     <>
@@ -60,7 +61,7 @@ const Form2 = (props: formTitleProps) => {
           <label htmlFor="name">名前: </label>
           <input
             {...register('country', {
-              required: 'input country name'
+              required: 'input country name',
             })}
             type="text"
           />
@@ -76,8 +77,8 @@ const Form2 = (props: formTitleProps) => {
               required: 'input comment',
               pattern: {
                 value: /^[A-Z0-9._%+-]{4,}$/i,
-                message: 'fdasjfopdajfaowejfoa!!!!'
-              }
+                message: 'fdasjfopdajfaowejfoa!!!!',
+              },
             })}
             type="text"
           />
@@ -93,7 +94,7 @@ const Form2 = (props: formTitleProps) => {
         </button>
       </form>
     </>
-  )
-}
+  );
+};
 
-export default Form2
+export default Form2;

@@ -107,8 +107,12 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx"
-, "backend/src/main.ts"  ],
+    "src/**/*.tsx",
+    "backend/src/**/*.ts",
+    "backend/src/**/*.tsx",
+    "frontend/src/**/*.ts",
+    "frontend/src/**/*.tsx",
+  ],
   "exclude": [
     "node_modules"
   ]

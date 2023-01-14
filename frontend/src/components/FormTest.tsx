@@ -1,20 +1,20 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
+import React from 'react';
+import { useForm } from 'react-hook-form';
 
-function FormTest() {
+const FormTest = (): JSX.Element => {
   // get functions to build form with useForm() hook
-  const { register, handleSubmit, formState } = useForm()
-  const { isSubmitting } = formState
+  const { register, handleSubmit, formState } = useForm();
+  const { isSubmitting } = formState;
 
-  function onSubmit(data) {
+  async function onSubmit(data: unknown) {
     // return promise that resolves after 2 seconds
-    return new Promise((resolve) => {
+    return await new Promise((resolve) => {
       setTimeout(() => {
-        console.log(`data!!!!`)
-        console.log(data)
-        resolve(data)
-      }, 2000)
-    })
+        console.log(`data!!!!`);
+        console.log(data);
+        resolve(data);
+      }, 2000);
+    });
   }
 
   return (
@@ -28,7 +28,7 @@ function FormTest() {
             <label htmlFor="name">名前: </label>
             <input
               {...register('name', {
-                required: '名前を入力してください'
+                required: '名前を入力してください',
               })}
               type="text"
             />
@@ -43,6 +43,6 @@ function FormTest() {
         </form>
       </div>
     </div>
-  )
-}
-export default FormTest
+  );
+};
+export default FormTest;

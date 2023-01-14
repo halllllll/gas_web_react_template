@@ -1,19 +1,19 @@
-import { Button, Paper, Stack, TextField } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Button, Paper, Stack, TextField } from '@mui/material';
 
 type InputAreaProps = {
-  handleChangeName: (newLastName: string, newFirstName: string) => void
-}
+  handleChangeName: (newLastName: string, newFirstName: string) => void;
+};
 
-const InputArea = (props: InputAreaProps) => {
-  const { handleChangeName } = props
+const InputArea = (props: InputAreaProps): JSX.Element => {
+  const { handleChangeName } = props;
   // コンポーネントで使うときはラップしたほうがいいんだっけね
   const handleClick = () => {
-    handleChangeName(lastName, firstName)
-  }
+    handleChangeName(lastName, firstName);
+  };
 
-  const [lastName, setLastName] = useState('名字')
-  const [firstName, setFirstName] = useState('名前')
+  const [lastName, setLastName] = useState('名字');
+  const [firstName, setFirstName] = useState('名前');
 
   return (
     <Paper>
@@ -23,18 +23,18 @@ const InputArea = (props: InputAreaProps) => {
           label="苗字"
           variant="outlined" // ?
           style={{ width: 'fit-content' }}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setLastName(e.target.value)
-          }
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            setLastName(e.target.value);
+          }}
         />
         <TextField
           id="first-name"
           label="名前"
           variant="outlined" // ?
           style={{ width: 'fit-content' }}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setFirstName(e.target.value)
-          }
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+            setFirstName(e.target.value);
+          }}
         />
         <Button
           variant="contained" // ?
@@ -45,7 +45,7 @@ const InputArea = (props: InputAreaProps) => {
         </Button>
       </Stack>
     </Paper>
-  )
-}
+  );
+};
 
-export default InputArea
+export default InputArea;

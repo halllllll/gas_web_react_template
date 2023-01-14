@@ -1,7 +1,7 @@
-import { Paper, Stack, Typography } from '@mui/material'
-import React from 'react'
+import React from 'react';
+import { Paper, Stack, Typography } from '@mui/material';
 
-const TitleArea = () => {
+const TitleArea = (): JSX.Element => {
   return (
     <Paper>
       <Stack spacing={2} margin={2}>
@@ -13,7 +13,7 @@ const TitleArea = () => {
         </Typography>
       </Stack>
     </Paper>
-  )
-}
+  );
+};
 
-export default TitleArea
+export default TitleArea;
