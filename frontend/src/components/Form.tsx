@@ -12,7 +12,7 @@ type FormData = {
   email: string;
 };
 
-const Form = (props: formTitleProps): null => {
+const Form = (props: formTitleProps): JSX.Element => {
   const { formTitle } = props;
 
   // useFormの初期化
@@ -58,7 +58,7 @@ const Form = (props: formTitleProps): null => {
     console.log('はい');
   };
 
-  const handleOnError = (errors): void => {
+  const handleOnError = (errors: any): void => {
     console.error(`here is on handle On Error`);
     console.error(errors);
   };
