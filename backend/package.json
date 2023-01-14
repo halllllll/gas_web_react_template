@@ -4,7 +4,7 @@
   "description": "gas_web_react_backend",
   "main": "index.js",
   "scripts": {
-    "backend:parcel-desc": "echo `なぜか--dist-dirが効かず、index.jsが作成されるので、無理やりmvする。かつ、リネームする（index.jsはフロント側で使っている）`",
+    "backend:parcel-desc": "echo `なぜか--dist-dirが効かず、index.jsが作成されるので、無理やりmvする。かつ、リネームする（index.jsはフロント側で使っている）。なぜかbackend/distが作られないので、backend:parcelする前に手動で作った`",
     "backend:parcel": "./node_modules/.bin/parcel build src/main.ts  --dist-dir dist --no-source-maps --no-cache; node -e \"require('fs').copyFileSync('index.js', './dist/main.js')\"; rimraf index.js",
     "gen-dts": "./node_modules/.bin/google-script-dts-generator --sourcesDir . --outputDir ../frontend/src/@types"
   },

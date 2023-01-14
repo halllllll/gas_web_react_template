@@ -8,4 +8,4 @@ FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
 
 # [Optional] Uncomment if you want to install an additional version of node using nvm
 # ARG EXTRA_NODE_VERSION=10
-RUN apt-get update && upgrade -y
+RUN apt-get update -y
