@@ -24,7 +24,7 @@ const Form = (props: formTitleProps): JSX.Element => {
     criteriaMode: 'all',
     defaultValues: {
       name: 'これは名前のplaceholder',
-      email: 'thiis@default.mail',
+      email: 'thiis@default.mail.pseudo',
     },
   });
 
