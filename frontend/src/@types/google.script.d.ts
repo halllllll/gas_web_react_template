@@ -119,7 +119,7 @@ declare namespace google {
       }
     }
     /**
-     * google.script.url is an asynchronous client-side JavaScript API that can query URLs to obtain the current URL parameters and fragment. This API supports the google.script.history API. It can only be used in the context of a web app that uses IFRAME.
+     * google.script.url is an asynchronous client-side JavaScript API that can query URLs to obtain the cdurrent URL parameters and fragment. This API supports the google.script.history API. It can only be used in the context of a web app that uses IFRAME.
      */
     namespace url {
       /**

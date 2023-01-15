@@ -48,7 +48,7 @@ const Form = (props: formTitleProps): JSX.Element => {
       `data?(promise外) ${data}, email: ${data.email}, name: ${data.name}`
     );
     console.log('あとでpromise化する');
-    // いや呼んでないけどなんでis not a functionって言われなきゃいけねぇんだよ
+
     google.script.run
       .withSuccessHandler((d) => {
         console.log(`yes getData`);
