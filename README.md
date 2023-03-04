@@ -1,3 +1,10 @@
+# NOTE: This Repository will be archived
+
+`Vite`+`React`+`TypeScript`+`clasp`+`vite-plugin-singlefile`+`esbuild-gas-plugin`な構成の代替テンプレートを使ってください
+
+[react-vite-gas-ozendate](https://github.com/halllllll/react-vite-gas-ozendate)
+
+
 # What's this?
 
 `Google Apps Script`でWebアプリケーションを作る雛形。`React`+`TypeScript`+`clasp`+`Parcel`な構成。開発環境では`ESLint`と`prettier`も。
